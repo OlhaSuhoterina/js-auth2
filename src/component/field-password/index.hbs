@@ -1,0 +1,11 @@
+<div class="field field-password">
+	<label for="{{name}}" class="field-label">{{label}}</label>
+
+	<div class="field-wrapper">
+		<input oninput="signupForm.change(this.name, this.value)" type="{{password}}" class="field-input"
+			name="{{name}}" placeholder="{{placeholder}}">
+		<span onclick="fieldPassword.toggle(this)" class="field-icon"></span>
+	</div>
+
+
+</div>
