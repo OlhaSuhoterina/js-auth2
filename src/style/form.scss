@@ -34,6 +34,17 @@
     &:active {
         opacity: 0.3;
     }
+
+    &-disabled {
+        opacity: 0.5;
+        cursor: default;
+
+        &:hover,
+        &:active {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
 }
 
 .alert {
@@ -43,8 +54,8 @@
     font-size: 14px;
 
     &-success {
-        border-color: s.color(red);
-        color: s.color(red);
+        border-color: s.color(green);
+        color: s.color(green);
     }
 
     &-progress {
@@ -55,5 +66,15 @@
     &-error {
         border-color: s.color(red);
         color: s.color(red);
+    }
+
+    &-disabled {
+        display: none;
+    }
+}
+
+.validation {
+    &-active {
+        border-color: s.color(red) !important;   
     }
 }

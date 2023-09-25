@@ -10,7 +10,7 @@ class User {
   constructor({ email, password, role }) {
     this.email = email
     this.password = password
-    this.role = User.#convertRole()
+    this.role = User.#convertRole(role)
   }
 
   static #convertRole = (role) => {
@@ -30,6 +30,15 @@ class User {
     const user = new User(data)
 
     this.#list.push(user)
+
+    console.log(this.#list)
+  }
+
+  static getByEmail(email) {
+    return (
+      this.#list.find((user) => user.email === email) ||
+      null
+    )
   }
 }
 

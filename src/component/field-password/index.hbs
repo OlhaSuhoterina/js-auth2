@@ -2,7 +2,7 @@
 	<label for="{{name}}" class="field-label">{{label}}</label>
 
 	<div class="field-wrapper">
-		<input oninput="signupForm.change(this.name, this.value)" type="{{password}}" class="field-input"
+		<input oninput="{{action}}(this.name, this.value)" type="{{password}}" class="field-input validation"
 			name="{{name}}" placeholder="{{placeholder}}">
 		<span onclick="fieldPassword.toggle(this)" class="field-icon"></span>
 	</div>
