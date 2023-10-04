@@ -50,15 +50,15 @@ export const getTokenSession = () => {
   }
 }
 
-// export const getSession = () => {
-//   try {
-//     const session =
-//       JSON.parse(localStorage.getItem(SESSION_KEY)) ||
-//       window.session
+export const getSession = () => {
+  try {
+    const session =
+      JSON.parse(localStorage.getItem(SESSION_KEY)) ||
+      window.session
 
-//     return session || null
-//   } catch (er) {
-//     console.log(er)
-//     return null
-//   }
-// }
+    return session || null
+  } catch (er) {
+    console.log(er)
+    return null
+  }
+}

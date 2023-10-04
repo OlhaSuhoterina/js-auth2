@@ -3,6 +3,7 @@ import { Form } from '../../script/form'
 import {
   saveSession,
   getTokenSession,
+  getSession,
 } from '../../script/session'
 
 class SignupConfirmForm extends Form {
@@ -84,3 +85,27 @@ class SignupConfirmForm extends Form {
 }
 
 window.signupConfirmForm = new SignupConfirmForm()
+
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    if (window.session) {
+      if (window.session.user.isConfirm) {
+        location.assign('/')
+      }
+    } else {
+      location.assign('/')
+    }
+  } catch (e) {}
+
+  document
+    .querySelector('#renew')
+    .addEventListener('click', (e) => {
+      e.preventDefault()
+
+      const session = getSession()
+
+      location.assign(
+        `/signup-confirm?renew=true&email=${session.user.email}`,
+      )
+    })
+})
