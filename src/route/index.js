@@ -6,6 +6,15 @@ router.get('/', function (req, res) {
   res.render('index', {
     name: 'index',
     component: [''],
+    title: 'Index page',
+    data: {},
+  })
+})
+
+router.get('/home', function (req, res) {
+  res.render('home', {
+    name: 'home',
+    component: [''],
     title: 'Home page',
     data: {},
   })

@@ -51,4 +51,10 @@ body {
 		color: s.color('dark');
 	}
 	
+	&-subtitle {
+		font-size: 14px;
+		color: s.color(grey);
+		line-height: 1.5;
+	}
+	
 }
